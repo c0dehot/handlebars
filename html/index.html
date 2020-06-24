@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <style media="screen">
+        li {
+          background-color: wheat;
+          margin-bottom: 10px;
+          padding: 10px;
+          width: 50%;
+          font-family: sans-serif;
+        }
+      </style>
+      
+      <div id='menu'></div>
+
+      <script>
+        let html = '';
+
+        const menu = {
+            eater: "Ben",
+            foods: [ 'pizza', 'hotdogs', 'ice cream' ]
+        }
+
+        html += `<h1>Lunches for ${menu.eater}</h1>`;
+        
+        html += '<ul>';
+        menu.foods.forEach( function( lunch ){
+            html += `<li>${lunch}</li>`;
+        } );
+        html += '</ul>';
+        $('#menu').html( html );
+    </script>      
+
+      </ul>
+</body>
+</html>
